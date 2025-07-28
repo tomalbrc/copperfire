@@ -26,7 +26,8 @@
     "transparent": true,
     "collision": false,
     "solid": false,
-    "showBreakParticles": false
+    "showBreakParticles": false,
+    "pushReaction": "destroy"
   },
   "behaviour": {
     "fire": {
