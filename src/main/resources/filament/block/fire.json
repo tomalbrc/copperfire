@@ -2,16 +2,16 @@
   "id": "copperfire:fire",
   "blockResource": {
     "models": {
-      "floor0": "copperfire:custom/block/fire/green_floor0",
-      "floor1": "copperfire:custom/block/fire/green_floor1",
-      "side0": "copperfire:custom/block/fire/green_side0",
-      "side1": "copperfire:custom/block/fire/green_side1",
-      "side_alt0": "copperfire:custom/block/fire/green_side_alt0",
-      "side_alt1": "copperfire:custom/block/fire/green_side_alt1",
-      "up0": "copperfire:custom/block/fire/green_up0",
-      "up1": "copperfire:custom/block/fire/green_up1",
-      "up_alt0": "copperfire:custom/block/fire/green_up_alt0",
-      "up_alt1": "copperfire:custom/block/fire/green_up_alt1"
+      "floor0": "copperfire:custom/block/fire/cf_floor0",
+      "floor1": "copperfire:custom/block/fire/cf_floor1",
+      "side0": "copperfire:custom/block/fire/cf_side0",
+      "side1": "copperfire:custom/block/fire/cf_side1",
+      "side_alt0": "copperfire:custom/block/fire/cf_side_alt0",
+      "side_alt1": "copperfire:custom/block/fire/cf_side_alt1",
+      "up0": "copperfire:custom/block/fire/cf_up0",
+      "up1": "copperfire:custom/block/fire/cf_up1",
+      "up_alt0": "copperfire:custom/block/fire/cf_up_alt0",
+      "up_alt1": "copperfire:custom/block/fire/cf_up_alt1"
     }
   },
   "itemResource": {
