@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.10-SNAPSHOT'
+    id 'net.fabricmc.fabric-loom' version '1.15-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -14,19 +14,19 @@ base {
 repositories {
     maven { url 'https://maven.nucleoid.xyz' }
     maven { url 'https://maven.tomalbrc.de' }
+    maven { url 'https://maven.blamejared.com' }
 }
 
 dependencies {
     // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings loom.officialMojangMappings()
-    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    modImplementation("de.tomalbrc:filament:${project.filament_version}")
-    modImplementation ("eu.pb4:polymer-resource-pack:${project.polymer_version}")
-    modImplementation ("eu.pb4:polymer-autohost:${project.polymer_version}")
+    implementation("de.tomalbrc:filament:${project.filament_version}")
+    implementation ("eu.pb4:polymer-resource-pack:${project.polymer_version}")
+    implementation ("eu.pb4:polymer-autohost:${project.polymer_version}")
 }
 
 processResources {
@@ -42,7 +42,7 @@ processResources {
     }
 }
 
-def targetJavaVersion = 21
+def targetJavaVersion = 25
 tasks.withType(JavaCompile).configureEach {
     // ensure that the encoding is set to UTF-8, no matter what the system default is
     // this fixes some edge cases with special characters not displaying correctly
@@ -67,7 +67,7 @@ java {
 
 jar {
     from("LICENSE") {
-        rename { "${it}_${project.archivesBaseName}" }
+        rename { "${it}_${project.archives_base_name}" }
     }
 }
 
@@ -82,9 +82,5 @@ publishing {
 
     // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
     repositories {
-        // Add repositories to publish to here.
-        // Notice: This block does NOT have the same function as the block in the top level.
-        // The repositories here will be used for publishing your artifact, not for
-        // retrieving dependencies.
     }
 }
